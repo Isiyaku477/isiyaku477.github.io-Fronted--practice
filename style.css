@@ -8,10 +8,15 @@
 .sidebar {
   width: 250px;
   height: 100vh;
-  background: #222;
+  background: #1e1e2f;
   color: white;
   padding: 20px;
-  transition: 0.3s;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.logo {
+  margin-bottom: 30px;
 }
 
 .sidebar ul {
@@ -20,16 +25,38 @@
 }
 
 .sidebar ul li {
-  padding: 10px 0;
+  padding: 12px 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar ul li:hover {
+  background: #33334d;
 }
 
 /* Main Content */
 .main {
   flex: 1;
-  padding: 20px;
+  padding: 30px;
 }
 
-/* Collapsed Sidebar */
+#toggleBtn {
+  padding: 10px 15px;
+  border: none;
+  background: #1e1e2f;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#toggleBtn:hover {
+  background: #33334d;
+}
+
+/* Collapsed */
 .sidebar.closed {
-  width: 60px;
+  width: 70px;
 }
